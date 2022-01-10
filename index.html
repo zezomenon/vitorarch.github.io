@@ -16,9 +16,6 @@
                 .withAppKey('YWxlbG9obWc6MTU4YTQyNzMtMmVhMi00MWY5LWJhNzAtNDI4YWE3NDg1M2Yw')
                 .withButton({"color":"#0E7F61","icon":"https://blipmediastore.blob.core.windows.net/public-medias/Media_d34e6f8b-7a39-47a9-9b97-98b67939bea3"})
                 .withCustomCommonUrl('https://alelo-a2021c1.chat.blip.ai/')
-                .withEventHandler(BlipChat.ENTER_EVENT, function () {
-                  console.log('enter')
-                 })
                 .withCustomMessageMetadata({ 
                       previousURL: `CORP ${document.referrer}`,
                       currentURL: `CORP ${window.location.href}`,
@@ -35,6 +32,9 @@
                           profile: "['Decisão']",
                           cpf: '10159582652',
                       }
+                 })
+                .withEventHandler(BlipChat.ENTER_EVENT, function () {
+                    console.log('enter')
                  })
               
                 .build();
