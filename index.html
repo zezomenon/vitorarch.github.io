@@ -42,7 +42,7 @@
                 .withEventHandler(BlipChat.ENTER_EVENT, function () {
                     alert("versao 14");
                     console.log(builder.authConfig.userIdentity)
-                    blipClient.sendCommand({
+                    builder.sendCommand({
                       id:"some-random-guid",
                       to:"postmaster@ai.msging.net",
                       method: Lime.CommandMethod.SET,
@@ -51,7 +51,7 @@
                       resource: "NovoCNPJ"
                     });
                     console.log("atualizada primeira variavel")
-                    blipClient.sendCommand({
+                    builder.sendCommand({
                       id:"some-random-guid",
                       to:"postmaster@ai.msging.net",
                       method: Lime.CommandMethod.SET,
