@@ -36,7 +36,9 @@
                 .withEventHandler(BlipChat.ENTER_EVENT, function () {
                     console.log('enter')
                  })
-              
+                .withEventHandler(BlipChat.LOAD_EVENT, function () {
+                    console.log('chat loaded')
+                })
                 .build();
             }
         })();
