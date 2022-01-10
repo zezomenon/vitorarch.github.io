@@ -42,7 +42,7 @@
                 .withEventHandler(BlipChat.ENTER_EVENT, function () {
                     builder.sendCommand({  
                       id: Lime.Guid(),
-                      method: Lime.CommandMethod.MERGE,
+                      method: Lime.CommandMethod.merge,
                       uri: '/contacts',
                       type: 'application/vnd.lime.contact+json',
                       resource: {
