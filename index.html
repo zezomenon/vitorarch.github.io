@@ -41,23 +41,25 @@
                   })
                 .withEventHandler(BlipChat.ENTER_EVENT, function () {
                     alert("versao 14");
-                    console.log(builder);
+                    console.log(builder.authConfig.userIdentity)
                     blipClient.sendCommand({
                       id:"some-random-guid",
                       to:"postmaster@ai.msging.net",
                       method: Lime.CommandMethod.SET,
-                      uri: `/contexts/${builder.authConfig.userIdentity}/cnpj`,
+                      uri: `/contexts/${builder.authConfig.userIdentity}@0mn.io/cnpj`,
                       type: "text/plain",
                       resource: "NovoCNPJ"
                     });
+                    console.log("atualizada primeira variavel")
                     blipClient.sendCommand({
                       id:"some-random-guid",
                       to:"postmaster@ai.msging.net",
                       method: Lime.CommandMethod.SET,
-                      uri: `/contexts/${builder.widget.account.extras.profile}/profile`,
+                      uri: `/contexts/${builder.authConfig.userIdentity}@0mn.io/profile`,
                       type: "text/plain",
                       resource: "NovosPerfis"
                     });
+                    console.log("atualizada primeira variavel")
                 )}
               
                 builder.build();
