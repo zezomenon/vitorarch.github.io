@@ -36,11 +36,7 @@
                   })
                 .withEventHandler(BlipChat.ENTER_EVENT, function () {
                     alert("versao Certa");
-                    localStorage.clear();
-                    builder.widget.account.extras = {
-                      profile: "['Decisão']",
-                      cpf: '10159582652',
-                      teste: '10'
+                    builder.widget.account.extras.teste = '10';
                     }
                     
                 //    blipClient.sendCommand({
