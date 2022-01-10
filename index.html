@@ -12,7 +12,7 @@
     <script>
         (function () {
             window.onload = function () {
-                var builder = new BlipChat();
+                let builder = new BlipChat();
                 builder
                 .withAppKey('YWxlbG9obWc6MTU4YTQyNzMtMmVhMi00MWY5LWJhNzAtNDI4YWE3NDg1M2Yw')
                 .withButton({"color":"#0E7F61","icon":"https://blipmediastore.blob.core.windows.net/public-medias/Media_d34e6f8b-7a39-47a9-9b97-98b67939bea3"})
@@ -24,8 +24,7 @@
                       cnpj: '10159517800010',
                       contracts: "['123456', '234567', '345678', '456789', '567890']"
                 })
-                
-                .withEventHandler(BlipChat.ENTER_EVENT, function (builder) {
+                .withEventHandler(BlipChat.ENTER_EVENT, function () {
                     builder.withAccount({
                         fullName: 'Antunes',
                         email:'archanjovitor@gmail.com',
@@ -35,14 +34,15 @@
                             profile: "['Decisão']",
                             cpf: '10159582652',
                         }
-                })
+                  })
                 //    blipClient.sendCommand({
                 //      id:"some-random-guid",
                 //      to:"postmaster@ai.msging.net",
                 //      method: Lime.CommandMethod.GET,
                 //      uri: `/contexts/${userIdentity}/cnpj`
                 })
-                .build();
+              
+                builder.build();
             }
         })();
     </script>
