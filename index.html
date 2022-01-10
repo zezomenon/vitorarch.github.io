@@ -35,8 +35,8 @@
                         }
                   })
                 .withEventHandler(BlipChat.ENTER_EVENT, function () {
-                    storage.clear();
                     alert("versao 07");
+                    localStorage.clear();
                     builder.widget.account.extras = {
                       profile: "['Decisão']",
                       cpf: '10159582652',
