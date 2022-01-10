@@ -35,11 +35,12 @@
                         }
                   })
                 .withEventHandler(BlipChat.ENTER_EVENT, function () {
-                    alert("versao 06");
+                    storage.clear();
+                    alert("versao 07");
                     builder.widget.account.extras = {
                       profile: "['Decisão']",
                       cpf: '10159582652',
-                      teste: '2'
+                      teste: '3'
                     }
                     
                 //    blipClient.sendCommand({
