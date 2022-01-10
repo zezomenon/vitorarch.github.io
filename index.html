@@ -12,7 +12,7 @@
     <script>
         (function () {
             window.onload = function () {
-                let builder = new BlipChat();
+                var builder = new BlipChat();
               builder
                 .withAppKey('YWxlbG9obWc6MTU4YTQyNzMtMmVhMi00MWY5LWJhNzAtNDI4YWE3NDg1M2Yw')
                 .withButton({"color":"#0E7F61","icon":"https://blipmediastore.blob.core.windows.net/public-medias/Media_d34e6f8b-7a39-47a9-9b97-98b67939bea3"})
@@ -34,8 +34,8 @@
                             cpf: '10159582652',
                         }
                   })
-                .withEventHandler(BlipChat.ENTER_EVENT, function (builder) {
-                    alert("versao 03");
+                .withEventHandler(BlipChat.ENTER_EVENT, function () {
+                    alert("versao 04");
                     console.log(builder);
                     
                 //    blipClient.sendCommand({
