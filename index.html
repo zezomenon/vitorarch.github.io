@@ -48,22 +48,12 @@
                       resource: {
                           identity: `${builder.authConfig.userIdentity}`,
                           extras: {
-                              profile: 'Teste de mudanca',
+                              profile: 'Teste de mudanca'
                           },
                           "source": "0mn.io"
                       }
                     })
-                    console.log("atualizada primeira variavel")
-                    builder.sendCommand({
-                      id:"some-random-guid123",
-                      to:"postmaster@ai.msging.net",
-                      method: Lime.CommandMethod.set,
-                      uri: `/contexts/${}@0mn.io/profileAccess`,
-                      type: "text/plain",
-                      resource: "NovosPerfis"
-                    });
-                    console.log("atualizada primeira variavel")
-                })
+                });
               
                 builder.build();
             }
