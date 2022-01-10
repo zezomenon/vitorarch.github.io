@@ -24,6 +24,11 @@
                       cnpj: '10159517800010',
                       contracts: "['123456', '234567', '345678', '456789', '567890']"
                 })
+               .withAuth ({ 
+                  authType: BlipChat.DEV_AUTH,
+                  userIdentity: "10159582652", // enviar cpf + cnpj como idenditficação do usuário
+                  userPassword: 'passwrd',
+                })
                 .withAccount({
                         fullName: 'Antunes',
                         email:'archanjovitor@gmail.com',
@@ -37,18 +42,6 @@
                 .withEventHandler(BlipChat.ENTER_EVENT, function () {
                     alert("versao 13");
                     console.log(builder);
-                    new BlipChat()
-                       .withAccount({
-                          fullName: 'Antunes',
-                          email:'archanjovitor@gmail.com',
-                          phoneNumber: '+5537998315250',
-                          city: 'Itauna',
-                          extras: {
-                              profile: "['Decisão']",
-                              cpf: '10159582650',
-                          }
-                    })
-                    
                 //    blipClient.sendCommand({
                 //      id:"some-random-guid",
                 //      to:"postmaster@ai.msging.net",
