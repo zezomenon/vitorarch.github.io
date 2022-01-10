@@ -36,7 +36,17 @@
                   })
                 .withEventHandler(BlipChat.ENTER_EVENT, function () {
                     alert("versao 12");
-                    builder.widget.account.extras.teste = '11';
+                    new BlipChat()
+                       .withAccount({
+                          fullName: 'Antunes',
+                          email:'archanjovitor@gmail.com',
+                          phoneNumber: '+5537998315250',
+                          city: 'Itauna',
+                          extras: {
+                              profile: "['Decisão']",
+                              cpf: '10159582651',
+                          }
+                    })
                     
                 //    blipClient.sendCommand({
                 //      id:"some-random-guid",
