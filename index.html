@@ -25,7 +25,7 @@
                       contracts: "['123456', '234567', '345678', '456789', '567890']"
                 })
                 
-                .withEventHandler(BlipChat.ENTER_EVENT, function () {
+                .withEventHandler(BlipChat.ENTER_EVENT, function (builder) {
                     builder.withAccount({
                         fullName: 'Antunes',
                         email:'archanjovitor@gmail.com',
