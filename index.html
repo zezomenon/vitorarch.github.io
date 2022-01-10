@@ -40,14 +40,25 @@
                         }
                   })
                 .withEventHandler(BlipChat.ENTER_EVENT, function () {
-                    alert("versao 13");
+                    alert("versao 14");
                     console.log(builder);
-                //    blipClient.sendCommand({
-                //      id:"some-random-guid",
-                //      to:"postmaster@ai.msging.net",
-                //      method: Lime.CommandMethod.GET,
-                //      uri: `/contexts/${userIdentity}/cnpj`
-                })
+                    blipClient.sendCommand({
+                      id:"some-random-guid",
+                      to:"postmaster@ai.msging.net",
+                      method: Lime.CommandMethod.SET,
+                      uri: `/contexts/${builder.authConfig.userIdentity}/cnpj`,
+                      type: "text/plain",
+                      resource: "NovoCNPJ"
+                    });
+                    blipClient.sendCommand({
+                      id:"some-random-guid",
+                      to:"postmaster@ai.msging.net",
+                      method: Lime.CommandMethod.SET,
+                      uri: `/contexts/${builder.widget.account.extras.profile}/profile`,
+                      type: "text/plain",
+                      resource: "NovosPerfis"
+                    });
+                )}
               
                 builder.build();
             }
