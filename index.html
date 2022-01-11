@@ -18,21 +18,17 @@
                 .withButton({"color":"#0E7F61","icon":"https://blipmediastore.blob.core.windows.net/public-medias/Media_d34e6f8b-7a39-47a9-9b97-98b67939bea3"})
                 .withCustomCommonUrl('https://alelo-a2021c1.chat.blip.ai/')
                 .withCustomMessageMetadata({ 
-                      previousURL: `CORP ${document.referrer}`,
-                      currentURL: `CORP ${window.location.href}`,
                       channel: 'CORP',
                       cnpj: '10159517800010',
-                      contracts: "['123456', '234567', '345678', '456789', '567890']"
+                      contracts: "['123456', '234567', '345678', '456789', '567890']",
+                      profile: "['Decisão']",
+                      cpf: '10159582652',
                 })
                 .withAccount({
                         fullName: 'Antunes',
                         email:'archanjovitor@gmail.com',
                         phoneNumber: '+5537998315250',
                         city: 'Itauna',
-                        extras: {
-                            profile: "['Decisão']",
-                            cpf: '10159582652',
-                        }
                   })
                 builder.build();
             }
