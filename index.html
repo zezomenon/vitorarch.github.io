@@ -39,22 +39,6 @@
                             cpf: '10159582652',
                         }
                   })
-                .withEventHandler(BlipChat.ENTER_EVENT, function () {
-                    builder.sendCommand({  
-                      id: Lime.Guid(),
-                      method: Lime.CommandMethod.merge,
-                      uri: '/contacts',
-                      type: 'application/vnd.lime.contact+json',
-                      resource: {
-                          identity: `${builder.authConfig.userIdentity}`,
-                          extras: {
-                              profile: 'Teste de mudanca'
-                          },
-                          "source": "0mn.io"
-                      }
-                    })
-                });
-              
                 builder.build();
             }
         })();
